@@ -5,7 +5,7 @@ This is a modern web application built with:
 - Next.js 15.2.4
 - TypeScript
 - Tailwind CSS
-- Radix UI Components
+- SchadCN Components
 - Framer Motion for animations
 
 ## Prerequisites
@@ -106,3 +106,8 @@ For any additional help or questions, please refer to:
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Radix UI Documentation](https://www.radix-ui.com/docs/primitives/overview/introduction)
+
+
+## Author
+
+Designed and developed by Shahid Mollick
