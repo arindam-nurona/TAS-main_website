@@ -95,6 +95,53 @@ talendojowebsite1/
 └── hooks/        # Custom React hooks
 ```
 
+## Managing Video Content
+
+### Location
+Video content is managed in the `components/video-showcase.tsx` file. The videos are defined in the `videos` array at the beginning of the file.
+
+### Data Structure
+Each video entry requires the following properties:
+```typescript
+{
+  id: number,           // Unique identifier for the video
+  title: string,        // Title of the video
+  description: string,  // Description of the video
+  videoId: string,      // YouTube video ID
+  thumbnail: string     // YouTube thumbnail URL
+}
+```
+
+### Adding or Changing Videos
+1. Locate the `videos` array in `components/video-showcase.tsx`
+2. To add a new video:
+   - Add a new object to the array
+   - Increment the `id` field
+   - Get the YouTube video ID from your video URL (e.g., 'dQw4w9WgXcQ' from 'https://youtube.com/watch?v=dQw4w9WgXcQ')
+   - Set the thumbnail URL using the video ID: `https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg`
+
+Example:
+```typescript
+const videos = [
+  {
+    id: 4,  // Increment from the last ID
+    title: "New Feature Demo",
+    description: "Showcase of our latest feature",
+    videoId: "YOUR_VIDEO_ID",
+    thumbnail: "https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg",
+  },
+  // ... existing videos
+]
+```
+
+### Important Notes
+- Always use high-quality video thumbnails (maxresdefault.jpg)
+- The component includes a fallback to 'hqdefault.jpg' if maxresdefault is not available
+- Keep descriptions concise but informative
+- Ensure video IDs are correct and videos are accessible
+- The first video in the array will be the default featured video
+- Videos autoplay in sequence on the showcase section
+
 ## Additional Commands
 
 - `npm run lint` - Run ESLint to check code quality
