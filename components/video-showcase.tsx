@@ -16,22 +16,22 @@ const videos = [
 		title: 'AI-Powered Technical Screening',
 		description:
 			'See how our platform automates the technical screening process with intelligent algorithms',
-		videoId: 'dQw4w9WgXcQ',
-		thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
+		videoId: 'VuH2WlvwTDY',
+		thumbnail: 'https://img.youtube.com/vi/VuH2WlvwTDY/maxresdefault.jpg',
 	},
 	{
 		id: 2,
 		title: 'Unbiased Candidate Evaluation',
 		description: 'Learn how we eliminate bias from the hiring process using advanced AI',
-		videoId: 'dQw4w9WgXcQ',
-		thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
+		videoId: 'rCZK--xzqYM',
+		thumbnail: 'https://img.youtube.com/vi/rCZK--xzqYM/maxresdefault.jpg',
 	},
 	{
 		id: 3,
 		title: 'Seamless Integration',
 		description: 'Discover how Talmyra integrates with your existing workflow seamlessly',
-		videoId: 'dQw4w9WgXcQ',
-		thumbnail: 'https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg',
+		videoId: 'Do-CyRmqxLs',
+		thumbnail: 'https://img.youtube.com/vi/Do-CyRmqxLs/maxresdefault.jpg',
 	},
 ];
 
