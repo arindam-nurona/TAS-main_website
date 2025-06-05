@@ -63,10 +63,10 @@ export default function VideoShowcase() {
 
 	// Get appropriate thumbnail URL with fallback
 	const getThumbnailUrl = (videoId: string, index: number) => {
-		if (thumbnailError[index]) {
-			return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-		}
-		return `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+		// Use YouTube's frame capture feature to get the first frame
+		// Format: https://i.ytimg.com/vi_webp/{videoId}/maxres1.webp
+		// This gets the first frame of the video in high quality
+		return `https://i.ytimg.com/vi_webp/${videoId}/maxres2.webp`;
 	};
 
 	// Auto-rotate featured video
