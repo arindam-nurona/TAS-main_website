@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-BUCKET_NAME="hvbpbsbj.nurona.co"
+BUCKET_NAME="talmyra.com"
 BUILD_DIR="out"
 REGION="us-east-1"
 AWS_PROFILE="nurona-content"
