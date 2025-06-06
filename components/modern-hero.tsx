@@ -71,7 +71,7 @@ export default function ModernHero() {
 						variants={itemVariants}
 					>
 						<span className="text-muted-foreground relative z-10">
-							Revolutionizing Technical Hiring
+							Revolutionizing Hiring
 						</span>
 						<div className="mx-3 h-4 w-px bg-border"></div>
 						<span className="text-primary font-medium relative z-10">2025</span>
