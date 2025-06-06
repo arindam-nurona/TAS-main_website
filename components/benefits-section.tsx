@@ -12,7 +12,7 @@ const benefits = [
 	{
 		title: 'Reduce Time-to-Hire by 60%',
 		description:
-			'Automate early-stage technical screening and interviews to dramatically speed up your hiring process.',
+			'Automate early-stage screening and interviews to dramatically speed up your hiring process.',
 		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
 	},
 	{
@@ -24,7 +24,7 @@ const benefits = [
 	{
 		title: 'Eliminate Hiring Bias',
 		description:
-			'Our AI evaluates candidates objectively, focusing solely on technical abilities and communication skills.',
+			'Our AI evaluates candidates objectively, focusing solely on skills and communication abilities.',
 		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
 	},
 	{
@@ -74,7 +74,7 @@ export default function BenefitsSection() {
 						className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
 					>
 						Transform your
-						<span className="text-gradient ml-2">technical hiring</span>
+						<span className="text-gradient ml-2">hiring</span>
 					</motion.h2>
 					<motion.p
 						initial={{ opacity: 0, y: 20 }}

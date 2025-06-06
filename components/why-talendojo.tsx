@@ -9,7 +9,7 @@ const features = [
 	{
 		title: 'Save Time & Resources',
 		description:
-			'Automate technical screening, coding tests, and phone interviews to reduce recruiter workload by up to 80%.',
+			'Automate first-round screening, coding tests, and phone interviews to reduce recruiter workload by up to 80%.',
 		icon: (
 			<svg
 				width="24"
@@ -219,7 +219,7 @@ export default function WhyTalmyra() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="text-xl text-muted-foreground max-w-2xl mx-auto"
 					>
-						Designed to transform your technical hiring process from start to finish
+						Designed to transform your hiring process from start to finish
 					</motion.p>
 				</div>
 

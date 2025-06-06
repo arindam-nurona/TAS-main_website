@@ -107,7 +107,7 @@ export default function ModernHero() {
 						className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
 						variants={itemVariants}
 					>
-						The AI-powered platform that revolutionizes your technical hiring process with
+						The AI-powered platform that revolutionizes your hiring process with
 						<span className="text-primary font-medium"> automated screening</span> and
 						<span className="text-primary font-medium"> unbiased evaluations</span>.
 					</motion.p>

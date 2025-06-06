@@ -13,9 +13,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
 const videos = [
 	{
 		id: 1,
-		title: 'AI-Powered Technical Screening',
+		title: 'AI-Powered Candidate Screening',
 		description:
-			'See how our platform automates the technical screening process with intelligent algorithms',
+			'See how our platform automates the screening process with intelligent algorithms',
 		videoId: 'VuH2WlvwTDY',
 		thumbnail: 'https://img.youtube.com/vi/VuH2WlvwTDY/maxresdefault.jpg',
 	},
@@ -30,8 +30,8 @@ const videos = [
 		id: 3,
 		title: 'Seamless Integration',
 		description: 'Discover how Talmyra integrates with your existing workflow seamlessly',
-		videoId: 'Do-CyRmqxLs',
-		thumbnail: 'https://img.youtube.com/vi/Do-CyRmqxLs/maxresdefault.jpg',
+		videoId: 'SJtbwD3gKJA',
+		thumbnail: 'https://img.youtube.com/vi/SJtbwD3gKJA/maxresdefault.jpg',
 	},
 ];
 
@@ -228,11 +228,10 @@ export default function VideoShowcase() {
 						See Talmyra in Action
 					</div>
 					<h2 className="text-4xl md:text-5xl font-bold mb-6">
-						Experience the future of{' '}
-						<span className="text-gradient">technical hiring</span>
+						Experience the future of <span className="text-gradient">hiring</span>
 					</h2>
 					<p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-						Watch how our AI-powered platform transforms technical hiring with real-world
+						Watch how our AI-powered platform transforms hiring with real-world
 						demonstrations
 					</p>
 				</motion.div>
