@@ -23,15 +23,15 @@ const videos = [
 		id: 2,
 		title: 'Unbiased Candidate Evaluation',
 		description: 'Learn how we eliminate bias from the hiring process using advanced AI',
-		videoId: 'rCZK--xzqYM',
-		thumbnail: 'https://img.youtube.com/vi/rCZK--xzqYM/maxresdefault.jpg',
+		videoId: 'iW68tDXrcLo',
+		thumbnail: 'https://img.youtube.com/vi/iW68tDXrcLo/maxresdefault.jpg',
 	},
 	{
 		id: 3,
 		title: 'Seamless Integration',
 		description: 'Discover how Talmyra integrates with your existing workflow seamlessly',
-		videoId: 'SJtbwD3gKJA',
-		thumbnail: 'https://img.youtube.com/vi/SJtbwD3gKJA/maxresdefault.jpg',
+		videoId: 'UHsYZDQMxbo',
+		thumbnail: 'https://img.youtube.com/vi/UHsYZDQMxbo/maxresdefault.jpg',
 	},
 ];
 
@@ -488,7 +488,7 @@ export default function VideoShowcase() {
 					</div>
 				</div>
 
-				{/* CTA Section */}
+				{/* Watch More Videos Section */}
 				<motion.div
 					className="text-center"
 					initial={{ opacity: 0, y: 30 }}
@@ -501,8 +501,12 @@ export default function VideoShowcase() {
 						size="lg"
 						className="rounded-full px-8 py-6 text-lg btn-modern"
 					>
-						<Link href="#contact" className="flex items-center">
-							<span className="relative z-10">Get Your Personalized Demo</span>
+						<Link
+							href="https://www.youtube.com/playlist?list=PLJfNO4VZ6-dNdl0LbnEl-Yj81JXzGDdeC"
+							target="_blank"
+							className="flex items-center"
+						>
+							<span className="relative z-10">Watch More Videos</span>
 							<ArrowRight className="relative z-10 ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
 						</Link>
 					</Button>
