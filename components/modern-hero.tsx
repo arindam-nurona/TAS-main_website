@@ -32,34 +32,34 @@ const heroConfig = [
 		bubbles: [
 			{
 				id: 1,
-				text: 'Smart Analysis',
-				position: { x: '-5%', y: '15%' },
-				delay: 0.2,
-				color: 'primary',
-				icon: Zap,
+				text: 'One-Click Apply',
+				position: { x: '-8%', y: '10%' },
+				delay: 0.7,
+				color: 'success',
+				icon: Clock,
 			},
 			{
 				id: 2,
-				text: 'Bias-Free',
-				position: { x: '95%', y: '5%' },
-				delay: 0.4,
-				color: 'success',
-				icon: Shield,
+				text: 'Resume Analysis',
+				position: { x: '92%', y: '60%' },
+				delay: 0.2,
+				color: 'primary',
+				icon: BarChart3,
 			},
 			{
 				id: 3,
-				text: 'Instant Results',
-				position: { x: '5%', y: '95%' },
+				text: 'AI Scoring',
+				position: { x: '-8%', y: '80%' },
 				delay: 0.6,
 				color: 'accent',
-				icon: Clock,
+				icon: Zap,
 			},
 		],
 		icon: Zap,
 	},
 	{
 		id: 2,
-		image: '/hero-image-2.png',
+		image: '/hero-image-2.webp',
 		alt: 'Enhanced Candidate Experience',
 		title: 'Candidate Experience',
 		subtitle: 'Seamless interview process',
@@ -67,34 +67,26 @@ const heroConfig = [
 		bubbles: [
 			{
 				id: 1,
-				text: 'User Friendly',
-				position: { x: '-9%', y: '8%' },
+				text: 'Smart Filters',
+				position: { x: '-6%', y: '15%' },
 				delay: 0.3,
-				color: 'accent',
+				color: 'secondary',
 				icon: Users,
 			},
 			{
 				id: 2,
-				text: 'Quick Setup',
-				position: { x: '97%', y: '23%' },
+				text: 'Job Matching',
+				position: { x: '92%', y: '50%' },
 				delay: 0.5,
 				color: 'primary',
-				icon: Zap,
-			},
-			{
-				id: 3,
-				text: 'Global Access',
-				position: { x: '8%', y: '97%' },
-				delay: 0.7,
-				color: 'success',
-				icon: Globe,
+				icon: Target,
 			},
 		],
 		icon: Target,
 	},
 	{
 		id: 3,
-		image: '/hero-image-3.svg',
+		image: '/hero-image-3.webp',
 		alt: 'Advanced Analytics Dashboard',
 		title: 'Analytics Dashboard',
 		subtitle: 'Data-driven hiring insights',
@@ -102,26 +94,26 @@ const heroConfig = [
 		bubbles: [
 			{
 				id: 1,
-				text: 'Performance Metrics',
-				position: { x: '2%', y: '12%' },
+				text: 'Real-time Analytics',
+				position: { x: '-5%', y: '10%' },
 				delay: 0.2,
-				color: 'secondary',
+				color: 'primary',
 				icon: BarChart3,
 			},
-			{
-				id: 2,
-				text: 'Predictive Analytics',
-				position: { x: '90%', y: '14%' },
-				delay: 0.4,
-				color: 'success',
-				icon: TrendingUp,
-			},
+			// {
+			// 	id: 2,
+			// 	text: 'Smart Predictions',
+			// 	position: { x: '95%', y: '25%' },
+			// 	delay: 0.4,
+			// 	color: 'success',
+			// 	icon: TrendingUp,
+			// },
 			{
 				id: 3,
-				text: 'Custom Reports',
-				position: { x: '6%', y: '98%' },
+				text: 'Performance Insights',
+				position: { x: '92%', y: '74%' },
 				delay: 0.6,
-				color: 'primary',
+				color: 'accent',
 				icon: Award,
 			},
 		],
@@ -132,13 +124,13 @@ const heroConfig = [
 // Enhanced bubble variants with more prominence
 const bubbleVariants = {
 	primary:
-		'bg-white/98 backdrop-blur-md text-slate-700 border border-slate-200/60 shadow-xl shadow-primary/15',
+		'bg-white/80 dark:bg-slate-900/60 backdrop-blur-md text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-600/40 shadow-xl shadow-primary/15 dark:shadow-primary/25',
 	success:
-		'bg-white/98 backdrop-blur-md text-slate-700 border border-slate-200/60 shadow-xl shadow-emerald-500/15',
+		'bg-white/80 dark:bg-slate-900/60 backdrop-blur-md text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-600/40 shadow-xl shadow-emerald-500/15 dark:shadow-emerald-500/25',
 	accent:
-		'bg-white/98 backdrop-blur-md text-slate-700 border border-slate-200/60 shadow-xl shadow-violet-500/15',
+		'bg-white/80 dark:bg-slate-900/60 backdrop-blur-md text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-600/40 shadow-xl shadow-violet-500/15 dark:shadow-violet-500/25',
 	secondary:
-		'bg-white/98 backdrop-blur-md text-slate-700 border border-slate-200/60 shadow-xl shadow-blue-500/15',
+		'bg-white/80 dark:bg-slate-900/60 backdrop-blur-md text-slate-700 dark:text-slate-200 border border-slate-200/60 dark:border-slate-600/40 shadow-xl shadow-blue-500/15 dark:shadow-blue-500/25',
 };
 
 export default function ModernHero() {
@@ -429,24 +421,24 @@ export default function ModernHero() {
 													}}
 												>
 													{/* Enhanced glass morphism background */}
-													<div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-white/10 to-transparent"></div>
+													<div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-white/10 to-transparent dark:from-white/10 dark:via-white/5 dark:to-transparent"></div>
 
 													{/* Content with icon - Enhanced Google style */}
 													<div className="relative flex items-center gap-2.5 whitespace-nowrap">
 														<div
 															className={`flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full shadow-sm ${
 																bubble.color === 'primary'
-																	? 'bg-primary/15 text-primary'
+																	? 'bg-primary/15 dark:bg-primary/25 text-primary'
 																	: bubble.color === 'success'
-																	? 'bg-emerald-100 text-emerald-600'
+																	? 'bg-emerald-100 dark:bg-emerald-900/50 text-emerald-600 dark:text-emerald-400'
 																	: bubble.color === 'accent'
-																	? 'bg-violet-100 text-violet-600'
-																	: 'bg-blue-100 text-blue-600'
+																	? 'bg-violet-100 dark:bg-violet-900/50 text-violet-600 dark:text-violet-400'
+																	: 'bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400'
 															}`}
 														>
 															<IconComponent className="w-3.5 h-3.5" />
 														</div>
-														<span className="text-slate-700 font-semibold text-sm tracking-wide">
+														<span className="text-slate-700 dark:text-slate-200 font-semibold text-sm tracking-wide">
 															{bubble.text}
 														</span>
 													</div>
