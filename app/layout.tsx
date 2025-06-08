@@ -28,6 +28,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="scroll-smooth" suppressHydrationWarning>
+			<head>
+				<link rel="preload" href="/logo.png" as="image" />
+				<link rel="preload" href="/hero-image-1.svg" as="image" />
+				<link rel="preload" href="/hero-image-2.webp" as="image" />
+				<link rel="preload" href="/hero-image-3.webp" as="image" />
+			</head>
 			<body className={`${inter.variable} font-sans antialiased`}>
 				<ThemeProvider
 					attribute="class"

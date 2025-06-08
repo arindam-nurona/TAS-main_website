@@ -360,7 +360,7 @@ export default function ModernHero() {
 													alt={currentConfig.alt}
 													fill
 													className="object-cover object-center rounded-2xl"
-													priority={currentImageIndex === 0}
+													priority
 													onLoad={() => setIsLoaded(true)}
 												/>
 

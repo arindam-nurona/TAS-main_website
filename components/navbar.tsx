@@ -68,6 +68,7 @@ export default function Navbar() {
 								width={32}
 								height={32}
 								className="h-8 w-auto"
+								priority
 							/>
 							<span className="ml-2 text-xl font-medium text-foreground">
 								<span className="text-primary font-bold">Tal</span>
