@@ -332,7 +332,7 @@ export default function ModernHero() {
 						<div className="relative">
 							{/* Enhanced glow effect with primary color */}
 							<motion.div
-								className="absolute -inset-4 rounded-2xl blur-2xl opacity-60 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40"
+								className="absolute -inset-4 rounded-3xl blur-2xl opacity-60 bg-gradient-to-r from-primary/40 via-primary/20 to-primary/40"
 								animate={{
 									opacity: [0.4, 0.7, 0.4],
 									scale: [1, 1.02, 1],
@@ -346,11 +346,11 @@ export default function ModernHero() {
 							/>
 
 							{/* Main container with reduced padding/bezel - removed overflow-hidden */}
-							<div className="relative bg-background/95 backdrop-blur-sm border border-border/50 rounded-2xl  shadow-2xl shadow-primary/20">
+							<div className="relative bg-background/95 backdrop-blur-sm border border-border/50 rounded-3xl shadow-2xl shadow-primary/20">
 								{/* Image carousel with extra padding for border bubbles */}
-								<div className="relative rounded-xl aspect-[16/10] sm:aspect-[16/9] p-2 overflow-visible">
+								<div className="relative rounded-2xl aspect-[16/10] sm:aspect-[16/9] p-3 overflow-visible">
 									{/* Inner container with overflow hidden only for image */}
-									<div className="relative w-full h-full overflow-hidden rounded-lg">
+									<div className="relative w-full h-full overflow-hidden rounded-2xl">
 										<AnimatePresence mode="wait">
 											<motion.div
 												key={currentImageIndex}
@@ -367,13 +367,13 @@ export default function ModernHero() {
 													src={currentConfig.image}
 													alt={currentConfig.alt}
 													fill
-													className="object-cover object-center rounded-[32px]"
+													className="object-cover object-center rounded-2xl"
 													priority={currentImageIndex === 0}
 													onLoad={() => setIsLoaded(true)}
 												/>
 
 												{/* Subtle overlay */}
-												<div className="absolute inset-0 bg-gradient-to-t from-background/10 via-transparent to-transparent rounded-lg"></div>
+												<div className="absolute inset-0 bg-gradient-to-t from-background/10 via-transparent to-transparent rounded-2xl"></div>
 											</motion.div>
 										</AnimatePresence>
 									</div>
