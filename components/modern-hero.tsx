@@ -23,16 +23,78 @@ import { motion, useAnimation, useInView, AnimatePresence } from 'framer-motion'
 // Hero image configuration with bubbles positioned strictly on borders/outside
 const heroConfig = [
 	{
-		id: 1,
-		image: '/hero-image-1.svg',
-		alt: 'AI-Powered Technical Screening',
-		title: 'AI-Powered Screening',
-		subtitle: 'Intelligent candidate evaluation',
-		badges: ['AI-Powered', '95% Accuracy', 'Real-time'],
+		id: 3,
+		image: '/hero-image-3.webp',
+		alt: 'AI Voice Interview Interface',
+		title: 'AI Voice Interview',
+		subtitle: 'Natural conversation-based technical interviews',
+		badges: ['Voice Recognition', 'Real-time Analysis', 'Natural Flow'],
 		bubbles: [
 			{
 				id: 1,
-				text: 'One-Click Apply',
+				text: 'Human-like Conversation',
+				position: { x: '-10%', y: '15%' },
+				delay: 0.3,
+				color: 'secondary',
+				icon: Users,
+			},
+			{
+				id: 2,
+				text: 'Smart Follow-up Questions',
+				position: { x: '92%', y: '50%' },
+				delay: 0.5,
+				color: 'primary',
+				icon: Target,
+			},
+			{
+				id: 3,
+				text: 'Personalized Voice Selection',
+				position: { x: '-8%', y: '75%' },
+				delay: 0.7,
+				color: 'accent',
+				icon: Globe,
+			},
+		],
+		icon: Target,
+	},
+	{
+		id: 4,
+		image: '/hero-image-4.webp',
+		alt: 'Voice Interview Results and Full Trace',
+		title: 'Interview Results & Trace',
+		subtitle: 'Complete interview analysis with full conversation trace',
+		badges: ['Full Transcript', 'Performance Analysis', 'Detailed Feedback'],
+		bubbles: [
+			{
+				id: 1,
+				text: 'Complete Transcript',
+				position: { x: '-5%', y: '10%' },
+				delay: 0.2,
+				color: 'primary',
+				icon: BarChart3,
+			},
+			{
+				id: 3,
+				text: 'Detailed Performance Analysis',
+				position: { x: '92%', y: '74%' },
+				delay: 0.6,
+				color: 'accent',
+				icon: Award,
+			},
+		],
+		icon: TrendingUp,
+	},
+	{
+		id: 1,
+		image: '/hero-image-1.webp',
+		alt: 'AI Resume Analysis Dashboard',
+		title: 'AI Resume Analysis',
+		subtitle: 'Intelligent resume screening and evaluation',
+		badges: ['Smart Parsing', 'Skills Extraction', 'Compatibility Score'],
+		bubbles: [
+			{
+				id: 1,
+				text: 'Smart Resume Parsing',
 				position: { x: '-8%', y: '10%' },
 				delay: 0.7,
 				color: 'success',
@@ -40,7 +102,7 @@ const heroConfig = [
 			},
 			{
 				id: 2,
-				text: 'Resume Analysis',
+				text: 'Skills Matching',
 				position: { x: '92%', y: '60%' },
 				delay: 0.2,
 				color: 'primary',
@@ -48,7 +110,7 @@ const heroConfig = [
 			},
 			{
 				id: 3,
-				text: 'AI Scoring',
+				text: 'AI Compatibility Score',
 				position: { x: '-8%', y: '80%' },
 				delay: 0.6,
 				color: 'accent',
@@ -60,61 +122,26 @@ const heroConfig = [
 	{
 		id: 2,
 		image: '/hero-image-2.webp',
-		alt: 'Enhanced Candidate Experience',
-		title: 'Candidate Experience',
-		subtitle: 'Seamless interview process',
-		badges: ['24/7 Available', 'Mobile Ready', 'Instant Feedback'],
+		alt: 'Advanced Coding Assessment Platform',
+		title: 'Advanced Coding Assessment',
+		subtitle: 'AI-powered hints generated in real-time',
+		badges: ['Real-time AI Hints', 'Multi-Language', 'Plagiarism Detection'],
 		bubbles: [
 			{
 				id: 1,
-				text: 'Smart Filters',
-				position: { x: '-6%', y: '15%' },
-				delay: 0.3,
-				color: 'secondary',
-				icon: Users,
-			},
-			{
-				id: 2,
-				text: 'Job Matching',
-				position: { x: '92%', y: '50%' },
-				delay: 0.5,
-				color: 'primary',
-				icon: Target,
-			},
-		],
-		icon: Target,
-	},
-	{
-		id: 3,
-		image: '/hero-image-3.webp',
-		alt: 'Advanced Analytics Dashboard',
-		title: 'Analytics Dashboard',
-		subtitle: 'Data-driven hiring insights',
-		badges: ['Deep Insights', '60% Faster', 'ROI Tracking'],
-		bubbles: [
-			{
-				id: 1,
-				text: 'Real-time Analytics',
+				text: 'Code Quality Analysis',
 				position: { x: '-5%', y: '10%' },
 				delay: 0.2,
 				color: 'primary',
 				icon: BarChart3,
 			},
-			// {
-			// 	id: 2,
-			// 	text: 'Smart Predictions',
-			// 	position: { x: '95%', y: '25%' },
-			// 	delay: 0.4,
-			// 	color: 'success',
-			// 	icon: TrendingUp,
-			// },
 			{
-				id: 3,
-				text: 'Performance Insights',
-				position: { x: '92%', y: '74%' },
-				delay: 0.6,
-				color: 'accent',
-				icon: Award,
+				id: 2,
+				text: 'AI-Generated Hints',
+				position: { x: '92%', y: '30%' },
+				delay: 0.4,
+				color: 'success',
+				icon: Zap,
 			},
 		],
 		icon: TrendingUp,
@@ -218,10 +245,11 @@ export default function ModernHero() {
 						variants={itemVariants}
 					>
 						<span className="text-muted-foreground relative z-10">
-							Revolutionizing Technical Hiring
+							Your AI recruiter, hire smarter with
 						</span>
-						<div className="mx-3 h-4 w-px bg-border/60"></div>
-						<span className="text-primary font-medium relative z-10">2025</span>
+						{/* <div className="mx-3 h-4 w-px bg-border/60"></div> */}
+						<span className="text-primary font-medium relative z-10 px-1">90%</span>
+						<span className="text-muted-foreground relative z-10">less cost</span>
 						<div className="absolute inset-0 bg-primary/3 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
 					</motion.div>
 
