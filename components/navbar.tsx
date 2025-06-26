@@ -3,11 +3,27 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Menu, X } from 'lucide-react';
+import {
+	Menu,
+	X,
+	ChevronDown,
+	Building2,
+	Heart,
+	ShoppingCart,
+	Monitor,
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { motion, AnimatePresence } from 'framer-motion';
+import {
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuLabel,
+	DropdownMenuSeparator,
+	DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -84,6 +100,60 @@ export default function Navbar() {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ duration: 0.5, delay: 0.1 }}
 						>
+							{/* Who we serve dropdown */}
+							<DropdownMenu>
+								<DropdownMenuTrigger className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors group outline-none">
+									Who we serve
+									<ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+								</DropdownMenuTrigger>
+								<DropdownMenuContent align="start" className="w-56">
+									<DropdownMenuLabel className="text-xs text-muted-foreground uppercase tracking-wide">
+										Industries
+									</DropdownMenuLabel>
+									<DropdownMenuSeparator />
+									<DropdownMenuItem className="cursor-pointer">
+										<Heart className="mr-2 h-4 w-4 text-red-500" />
+										<div>
+											<div className="font-medium">Healthcare</div>
+											<div className="text-xs text-muted-foreground">
+												Streamline medical talent acquisition
+											</div>
+										</div>
+									</DropdownMenuItem>
+									<DropdownMenuItem className="cursor-pointer">
+										<Building2 className="mr-2 h-4 w-4 text-orange-500" />
+										<div>
+											<div className="font-medium">Construction</div>
+											<div className="text-xs text-muted-foreground">
+												Find skilled construction professionals
+											</div>
+										</div>
+									</DropdownMenuItem>
+									<DropdownMenuItem className="cursor-pointer">
+										<ShoppingCart className="mr-2 h-4 w-4 text-green-500" />
+										<div>
+											<div className="font-medium">Retail</div>
+											<div className="text-xs text-muted-foreground">
+												Rapid staff screening for retail operations
+											</div>
+										</div>
+									</DropdownMenuItem>
+									<DropdownMenuItem className="cursor-pointer">
+										<Monitor className="mr-2 h-4 w-4 text-blue-500" />
+										<div>
+											<div className="font-medium">Information Technology</div>
+											<div className="text-xs text-muted-foreground">
+												Scale your tech team with AI-powered screening
+											</div>
+										</div>
+									</DropdownMenuItem>
+									{/* <DropdownMenuSeparator /> */}
+									{/* <DropdownMenuItem className="cursor-pointer text-primary">
+										<div className="text-sm font-medium">See all industries →</div>
+									</DropdownMenuItem> */}
+								</DropdownMenuContent>
+							</DropdownMenu>
+
 							<Link
 								href="#videos"
 								className={cn(
@@ -201,6 +271,51 @@ export default function Navbar() {
 						transition={{ duration: 0.3 }}
 					>
 						<div className="container py-6 space-y-6">
+							{/* Mobile Who we serve section */}
+							<div className="space-y-3">
+								<div className="text-sm font-medium text-muted-foreground uppercase tracking-wide">
+									Who we serve
+								</div>
+								<div className="pl-4 space-y-3">
+									<div className="flex items-center py-2">
+										<Heart className="mr-3 h-4 w-4 text-red-500" />
+										<div>
+											<div className="font-medium">Healthcare</div>
+											<div className="text-xs text-muted-foreground">
+												Streamline medical talent acquisition
+											</div>
+										</div>
+									</div>
+									<div className="flex items-center py-2">
+										<Building2 className="mr-3 h-4 w-4 text-orange-500" />
+										<div>
+											<div className="font-medium">Construction</div>
+											<div className="text-xs text-muted-foreground">
+												Find skilled construction professionals
+											</div>
+										</div>
+									</div>
+									<div className="flex items-center py-2">
+										<ShoppingCart className="mr-3 h-4 w-4 text-green-500" />
+										<div>
+											<div className="font-medium">Retail</div>
+											<div className="text-xs text-muted-foreground">
+												Rapid staff screening for retail operations
+											</div>
+										</div>
+									</div>
+									<div className="flex items-center py-2">
+										<Monitor className="mr-3 h-4 w-4 text-blue-500" />
+										<div>
+											<div className="font-medium">Information Technology</div>
+											<div className="text-xs text-muted-foreground">
+												Scale your tech team with AI-powered screening
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
 							<Link
 								href="#videos"
 								className="block py-2 text-lg font-medium hover:text-primary transition-colors"
