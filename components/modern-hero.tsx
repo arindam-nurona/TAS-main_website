@@ -27,7 +27,7 @@ const heroConfig = [
 		image: '/hero-image-3.webp',
 		alt: 'AI Voice Interview Interface',
 		title: 'AI Voice Interview',
-		subtitle: 'Natural conversation-based technical interviews',
+		subtitle: 'AI-powered natural conversation-based interviews',
 		badges: ['Voice Recognition', 'Real-time Analysis', 'Natural Flow'],
 		bubbles: [
 			{
@@ -282,7 +282,7 @@ export default function ModernHero() {
 						className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
 						variants={itemVariants}
 					>
-						The AI-powered platform that revolutionizes your technical hiring process with
+						The AI-powered platform that revolutionizes your hiring process with
 						<span className="text-primary font-medium"> automated screening</span> and
 						<span className="text-primary font-medium"> unbiased evaluations</span>.
 					</motion.p>
@@ -299,7 +299,7 @@ export default function ModernHero() {
 							className="rounded-full px-8 py-6 text-lg btn-modern group"
 						>
 							<Link href="#contact" className="flex items-center">
-								<span className="relative z-10">Get Your Demo</span>
+								<span className="relative z-10">Get your Free Trial</span>
 								<ArrowRight className="relative z-10 ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
 							</Link>
 						</Button>

@@ -112,7 +112,7 @@ export default function BenefitsSection() {
 						className="rounded-full px-8 btn-modern group relative overflow-hidden"
 					>
 						<Link href="#contact" className="flex items-center">
-							<span className="relative z-10">Get Your Personalized Demo</span>
+							<span className="relative z-10">Get your Free Trial</span>
 							<ArrowRight className="relative z-10 ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
 							<span className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 rounded-full"></span>
 						</Link>

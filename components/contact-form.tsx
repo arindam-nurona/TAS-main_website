@@ -96,9 +96,8 @@ export default function ContactForm() {
 					transition={{ delay: 0.6, duration: 0.5 }}
 					className="text-muted-foreground max-w-md mx-auto"
 				>
-					We've received your request and will send you a personalized demo link
-					shortly. One of our team members will reach out to schedule a
-					walkthrough.
+					We've received your request and will send you trial access details shortly. One
+					of our team members will reach out to help you get started.
 				</motion.p>
 			</motion.div>
 		);
@@ -113,7 +112,7 @@ export default function ContactForm() {
 			animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
 			transition={{ duration: 0.6 }}
 		>
-			<h3 className="text-2xl font-bold mb-6">Get Your Personalized Demo</h3>
+			<h3 className="text-2xl font-bold mb-6">Get Your Free Trial</h3>
 
 			{error && (
 				<motion.div
@@ -203,7 +202,7 @@ export default function ContactForm() {
 						</>
 					) : (
 						<>
-							Get Personalized Demo
+							Get Your Free Trial
 							<ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
 						</>
 					)}
@@ -238,8 +237,8 @@ export default function ContactForm() {
 					</svg>
 				</div>
 				<p className="text-sm text-muted-foreground">
-					<span className="font-medium text-foreground">Quick setup</span> - Get
-					your demo within 24 hours
+					<span className="font-medium text-foreground">Quick setup</span> - Get your
+					trial access within 24 hours
 				</p>
 			</div>
 		</motion.form>
