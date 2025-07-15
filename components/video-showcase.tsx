@@ -16,8 +16,8 @@ const videos = [
 		title: 'AI-Powered Candidate Screening',
 		description:
 			'See how our platform automates the screening process with intelligent algorithms',
-		videoId: 'VuH2WlvwTDY',
-		thumbnail: 'https://img.youtube.com/vi/VuH2WlvwTDY/maxresdefault.jpg',
+		videoId: '0RsY-Jxzt5Q',
+		thumbnail: 'https://img.youtube.com/vi/0RsY-Jxzt5Q/maxresdefault.jpg',
 	},
 	{
 		id: 2,
