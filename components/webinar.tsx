@@ -100,7 +100,7 @@ export default function Webinar() {
 
 	return (
 		<div className="min-h-screen bg-background text-foreground">
-			{/* Hero Section */}
+			{/* Hero Section - Redesigned for Better Hierarchy */}
 			<section className="relative pt-20 pb-16 overflow-hidden">
 				<div className="absolute inset-0 -z-10">
 					<div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
@@ -109,117 +109,123 @@ export default function Webinar() {
 					<div className="absolute inset-0 bg-gradient-to-b from-background via-background/98 to-background"></div>
 				</div>
 
-				<div className="container max-w-6xl mx-auto px-4">
+				<div className="container max-w-7xl mx-auto px-4">
 					<motion.div
-						className="text-center"
+						className="grid lg:grid-cols-5 gap-12 items-start"
 						variants={containerVariants}
 						initial="hidden"
 						animate="visible"
 					>
-						{/* Live Badge */}
-						<motion.div
-							className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 backdrop-blur-sm px-6 py-2 text-sm mb-8"
-							variants={itemVariants}
-						>
-							<div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-							<span className="text-red-600 dark:text-red-400 font-medium">
-								LIVE WEBINAR
-							</span>
-							<div className="mx-2 h-4 w-px bg-border/60"></div>
-							<span className="text-muted-foreground">
-								September 23, 2025 • 12:00 PM PST
-							</span>
-						</motion.div>
-
-						{/* Main Title */}
-						<motion.h1
-							className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-8 leading-[0.9]"
-							variants={itemVariants}
-						>
-							<span className="block mb-4">
-								<span className="relative inline-block">
-									<span className="relative z-10 text-gradient animate-gradient bg-gradient-to-r from-primary via-primary/80 to-primary">
-										AI in Recruiting:
-									</span>
-									<span className="absolute bottom-2 left-0 w-full h-3 bg-primary/15 -z-10 transform skew-x-12"></span>
-								</span>
-							</span>
-							<span className="block text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-muted-foreground font-normal">
-								What It Means for You, Your Team, and Your Career
-							</span>
-						</motion.h1>
-
-						{/* Subtitle */}
-						<motion.p
-							className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-8"
-							variants={itemVariants}
-						>
-							Join industry experts for a{' '}
-							<span className="text-primary font-medium">no-pitch, insight-rich</span>{' '}
-							session exploring how AI is reshaping HR and what it means for your career
-							trajectory.
-						</motion.p>
-
-						{/* Key Points */}
-						<motion.div
-							className="flex flex-wrap justify-center gap-6 mb-8"
-							variants={itemVariants}
-						>
-							<Badge variant="outline" className="text-base py-2 px-4">
-								<Users className="w-4 h-4 mr-2" />
-								Expert Panel Discussion
-							</Badge>
-							<Badge variant="outline" className="text-base py-2 px-4">
-								<Target className="w-4 h-4 mr-2" />
-								Live Q&A Session
-							</Badge>
-							<Badge variant="outline" className="text-base py-2 px-4">
-								<CheckCircle2 className="w-4 h-4 mr-2" />
-								No Sales Pitch
-							</Badge>
-						</motion.div>
-
-						{/* Key Benefits Preview */}
-						{/*
-						<motion.div
-							className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl p-6 mb-8 max-w-4xl mx-auto"
-							variants={itemVariants}
-						>
-							<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-								{[
-									{ icon: Zap, title: 'AI Revolution', desc: 'Transform recruiting' },
-									{ icon: TrendingUp, title: 'Career Growth', desc: 'Position yourself ahead' },
-									{ icon: Target, title: 'Real Examples', desc: 'Actionable insights' },
-									{ icon: Users, title: 'Expert Panel', desc: 'Industry leaders' },
-								].map((benefit, index) => (
-									<div key={index} className="text-center">
-										<div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-2">
-											<benefit.icon className="w-4 h-4 text-primary" />
-										</div>
-										<div className="text-sm font-medium mb-1">{benefit.title}</div>
-										<div className="text-xs text-muted-foreground">{benefit.desc}</div>
-									</div>
-								))}
-							</div>
-						</motion.div>
-                        */}
-
-						{/* Register Button */}
-						<motion.div className="mt-4" variants={itemVariants}>
-							<Button
-								onClick={() => {
-									const formSection = document.getElementById('registration-form');
-									formSection?.scrollIntoView({ behavior: 'smooth' });
-								}}
-								variant="gradient"
-								size="lg"
-								className="rounded-full px-8 py-6 text-lg btn-modern group"
+						{/* Main Content - Left Column (3/5 width) */}
+						<div className="lg:col-span-3 space-y-6">
+							{/* Compact Status Badge */}
+							<motion.div
+								className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 backdrop-blur-sm px-4 py-2 text-sm"
+								variants={itemVariants}
 							>
-								<span className="relative z-10 flex items-center">
-									Register Now
-									<ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
+								<div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+								<span className="text-red-600 dark:text-red-400 font-medium">
+									LIVE WEBINAR
 								</span>
-							</Button>
+							</motion.div>
+
+							{/* Main Title - Streamlined */}
+							<motion.h1
+								className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[0.95]"
+								variants={itemVariants}
+							>
+								<span className="block mb-2">
+									<span className="relative inline-block">
+										<span className="relative z-10 text-gradient animate-gradient bg-gradient-to-r from-primary via-primary/80 to-primary">
+											AI in Recruiting:
+										</span>
+										<span className="absolute bottom-2 left-0 w-full h-3 bg-primary/15 -z-10 transform skew-x-12"></span>
+									</span>
+								</span>
+								<span className="block text-2xl sm:text-3xl md:text-4xl text-muted-foreground font-normal">
+									What It Means for You, Your Team, and Your Career
+								</span>
+							</motion.h1>
+
+							{/* Value Proposition - Condensed */}
+							<motion.p
+								className="text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
+								variants={itemVariants}
+							>
+								Join industry experts for a{' '}
+								<span className="text-primary font-medium">no-pitch, insight-rich</span>{' '}
+								session exploring how AI is reshaping HR and your career trajectory.
+							</motion.p>
+
+							{/* Key Differentiators - Reduced to 2 */}
+							<motion.div className="flex flex-wrap gap-4" variants={itemVariants}>
+								<Badge variant="outline" className="text-sm py-2 px-4">
+									<Users className="w-4 h-4 mr-2" />
+									Expert Panel + Live Q&A
+								</Badge>
+								<Badge variant="outline" className="text-sm py-2 px-4">
+									<CheckCircle2 className="w-4 h-4 mr-2" />
+									No Sales Pitch
+								</Badge>
+							</motion.div>
+
+							{/* Primary CTA - Prominent */}
+							<motion.div className="pt-4" variants={itemVariants}>
+								<Button
+									onClick={() => {
+										const formSection = document.getElementById('registration-form');
+										formSection?.scrollIntoView({ behavior: 'smooth' });
+									}}
+									variant="gradient"
+									size="lg"
+									className="rounded-full px-8 py-6 text-lg btn-modern group"
+								>
+									<span className="relative z-10 flex items-center">
+										Register Free
+										<ArrowRight className="ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
+									</span>
+								</Button>
+							</motion.div>
+						</div>
+
+						{/* Event Details Card - Right Column (2/5 width) */}
+						<motion.div className="lg:col-span-2 mt-8" variants={itemVariants}>
+							<div className="bg-background/80 backdrop-blur-sm border border-border/50 rounded-xl p-6 space-y-6">
+								{/* Event DateTime */}
+								<div className="text-center border-b border-border/50 pb-6">
+									<div className="text-sm text-muted-foreground mb-2">Next Session</div>
+									<div className="text-xl font-bold mb-1">September 23, 2025</div>
+									<div className="text-lg text-muted-foreground">12:00 PM PST</div>
+								</div>
+
+								{/* What You'll Learn - Condensed */}
+								<div className="space-y-3">
+									<h3 className="font-semibold text-sm uppercase tracking-wide text-muted-foreground">
+										What You'll Learn
+									</h3>
+									<div className="space-y-2 text-sm">
+										{[
+											'Real AI applications in HR',
+											'Boost productivity strategies',
+											'Position for career growth',
+											'Actionable implementation tips',
+										].map((item, index) => (
+											<div key={index} className="flex items-start gap-2">
+												<CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+												<span>{item}</span>
+											</div>
+										))}
+									</div>
+								</div>
+
+								{/* Future Sessions Note - Enhanced Visibility */}
+								<div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
+									<p className="text-sm">
+										<span className="font-semibold text-foreground">Can't make this date?</span>{' '}
+										<span className="text-muted-foreground">Register to get notified of future sessions.</span>
+									</p>
+								</div>
+							</div>
 						</motion.div>
 					</motion.div>
 				</div>
@@ -264,9 +270,10 @@ export default function Webinar() {
 							<div className="space-y-4">
 								{[
 									'Real AI applications in HR operations',
-									'Boost productivity without adding headcount',
-									'Position yourself for career growth',
-									'Actionable strategies to implement immediately',
+									'How to boost team productivity without adding headcount',
+									'Key signals HR leaders are using to drive better decision-making',
+									'How to position yourself for career growth in an AI-driven org',
+									'Myths vs. realities: What AI can and cannot do',
 								].map((item, index) => (
 									<div key={index} className="flex items-start gap-3">
 										<CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -288,26 +295,21 @@ export default function Webinar() {
 								<div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
 									<TrendingUp className="w-6 h-6 text-primary" />
 								</div>
-								<h3 className="text-xl font-bold">Why Now</h3>
+								<h3 className="text-xl font-bold">Who Should Attend</h3>
 							</div>
 							<div className="space-y-4">
 								<p className="text-sm text-muted-foreground">Perfect for:</p>
 								{[
 									'HR Directors and VPs',
-									'Recruiting Managers',
+									'Recruiting and Talent Acquisition Managers',
 									'People Operations Professionals',
-									'HR Tech Innovators',
+									'HR Tech Curators and Innovators',
 								].map((role, index) => (
 									<div key={index} className="flex items-center gap-3">
 										<Users className="w-4 h-4 text-primary flex-shrink-0" />
 										<span className="text-sm">{role}</span>
 									</div>
 								))}
-								<div className="mt-6 pt-4 border-t border-border/50">
-									<p className="text-sm font-medium text-primary">
-										Don't get left behind in the AI transformation.
-									</p>
-								</div>
 							</div>
 						</motion.div>
 
