@@ -194,8 +194,11 @@ export default function Webinar() {
 								{/* Event DateTime */}
 								<div className="text-center border-b border-border/50 pb-6">
 									<div className="text-sm text-muted-foreground mb-2">Next Session</div>
-									<div className="text-xl font-bold mb-1">September 23, 2025</div>
+									<div className="text-xl font-bold mb-1">November 5, 2025</div>
 									<div className="text-lg text-muted-foreground">12:00 PM PST</div>
+									<div className="text-sm text-muted-foreground mt-2">
+										First Wednesday of every month
+									</div>
 								</div>
 
 								{/* What You'll Learn - Condensed */}
@@ -221,8 +224,12 @@ export default function Webinar() {
 								{/* Future Sessions Note - Enhanced Visibility */}
 								<div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
 									<p className="text-sm">
-										<span className="font-semibold text-foreground">Can't make this date?</span>{' '}
-										<span className="text-muted-foreground">Register to get notified of future sessions.</span>
+										<span className="font-semibold text-foreground">
+											Can't make this date?
+										</span>{' '}
+										<span className="text-muted-foreground">
+											We host webinars the first Wednesday of every month.
+										</span>
 									</p>
 								</div>
 							</div>
@@ -474,7 +481,7 @@ export default function Webinar() {
 								>
 									<div className="flex items-center justify-center gap-3 mb-2">
 										<Calendar className="h-4 w-4 text-primary" />
-										<span className="font-semibold text-sm">September 23, 2025</span>
+										<span className="font-semibold text-sm">November 5, 2025</span>
 									</div>
 									<div className="flex items-center justify-center gap-3">
 										<Clock className="h-4 w-4 text-primary" />

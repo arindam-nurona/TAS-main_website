@@ -288,7 +288,7 @@ export default function ModernHero() {
 					</motion.p>
 
 					{/* CTA Buttons */}
-					{/* TEMPORARY: Webinar promotion until September 23, 2025, 12 noon PST */}
+					{/* TEMPORARY: Webinar promotion until November 5, 2025, 12 noon PST */}
 					{/* After this date, enable the commented code below and disable this webinar section */}
 					<motion.div
 						className="flex flex-col sm:flex-row gap-4 justify-center mb-16 relative"
@@ -308,7 +308,7 @@ export default function ModernHero() {
 							</Button>
 						</div>
 
-						{/* Temporarily disabled - restore after September 23, 2025, 12 noon PST */}
+						{/* Temporarily disabled - restore after November 5, 2025, 12 noon PST */}
 						{/*
 						<Button
 							asChild
@@ -325,11 +325,13 @@ export default function ModernHero() {
 
 						<div className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 backdrop-blur-sm px-4 py-2 text-sm">
 							<div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-							<span className="text-red-600 dark:text-red-400 font-medium">Sept 23 • 12 PM PST</span>
+							<span className="text-red-600 dark:text-red-400 font-medium">
+								Nov 5 • 12 PM PST
+							</span>
 						</div>
 					</motion.div>
 
-					{/* ORIGINAL BUTTONS - Restore after September 23, 2025, 12 noon PST and remove webinar section above */}
+					{/* ORIGINAL BUTTONS - Restore after November 5, 2025, 12 noon PST and remove webinar section above */}
 					{/*
 					<motion.div
 						className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
