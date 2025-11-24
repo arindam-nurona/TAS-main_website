@@ -288,51 +288,6 @@ export default function ModernHero() {
 					</motion.p>
 
 					{/* CTA Buttons */}
-					{/* TEMPORARY: Webinar promotion until November 5, 2025, 12 noon PST */}
-					{/* After this date, enable the commented code below and disable this webinar section */}
-					<motion.div
-						className="flex flex-col sm:flex-row gap-4 justify-center mb-16 relative"
-						variants={itemVariants}
-					>
-						<div className="relative">
-							<Button
-								asChild
-								variant="gradient"
-								size="lg"
-								className="rounded-full px-8 py-6 text-lg btn-modern group relative"
-							>
-								<Link href="/webinar" className="flex items-center">
-									<span className="relative z-10">Join Live Webinar</span>
-									<ArrowRight className="relative z-10 ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
-								</Link>
-							</Button>
-						</div>
-
-						{/* Temporarily disabled - restore after November 5, 2025, 12 noon PST */}
-						{/*
-						<Button
-							asChild
-							variant="outline"
-							size="lg"
-							className="rounded-full px-8 py-6 text-lg border-primary/20 hover:bg-primary/5 transition-all duration-300 group"
-						>
-							<Link href="#videos" className="flex items-center">
-								<Play className="mr-2 h-5 w-5 transition-transform duration-300 group-hover:scale-110" />
-								<span>Watch Demo</span>
-							</Link>
-						</Button>
-						*/}
-
-						<div className="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-500/10 backdrop-blur-sm px-4 py-2 text-sm">
-							<div className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-							<span className="text-red-600 dark:text-red-400 font-medium">
-								Nov 5 • 12 PM PST
-							</span>
-						</div>
-					</motion.div>
-
-					{/* ORIGINAL BUTTONS - Restore after November 5, 2025, 12 noon PST and remove webinar section above */}
-					{/*
 					<motion.div
 						className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
 						variants={itemVariants}
@@ -361,7 +316,6 @@ export default function ModernHero() {
 							</Link>
 						</Button>
 					</motion.div>
-					*/}
 
 					{/* Enhanced Hero Image with Better Navigation */}
 					<motion.div

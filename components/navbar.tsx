@@ -226,6 +226,13 @@ export default function Navbar() {
 									)}
 								></span>
 							</Link>
+							<Link
+								href="https://blog.talmyra.com/"
+								className="text-sm transition-colors relative group text-muted-foreground hover:text-foreground"
+							>
+								Blog
+								<span className="absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 w-0 group-hover:w-full"></span>
+							</Link>
 						</motion.nav>
 						<motion.div
 							className="flex items-center gap-4"
@@ -343,6 +350,13 @@ export default function Navbar() {
 								onClick={() => handleNavClick('contact')}
 							>
 								Contact
+							</Link>
+							<Link
+								href="https://blog.talmyra.com/"
+								className="block py-2 text-lg font-medium hover:text-primary transition-colors"
+								onClick={() => setIsOpen(false)}
+							>
+								Blog
 							</Link>
 							<Button
 								asChild
