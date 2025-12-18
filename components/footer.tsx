@@ -64,13 +64,19 @@ export default function Footer() {
 								Features
 							</Link>
 							<Link
+								href="#pricing"
+								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+							>
+								Pricing
+							</Link>
+							<Link
 								href="#videos"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Demo
 							</Link>
 							<Link
-								href="#contact"
+								href="#pricing"
 								className="text-sm text-muted-foreground hover:text-foreground transition-colors"
 							>
 								Contact

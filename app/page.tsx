@@ -5,7 +5,7 @@ import ModernHero from '@/components/modern-hero';
 import VideoShowcase from '@/components/video-showcase';
 import WhyTalmyra from '@/components/why-talendojo';
 import BenefitsSection from '@/components/benefits-section';
-import ContactSection from '@/components/contact-section';
+import PricingSection from '@/components/pricing-section';
 
 export default function Home() {
 	return (
@@ -13,9 +13,9 @@ export default function Home() {
 			<Navbar />
 			<ModernHero />
 			<VideoShowcase />
-			<WhyTalmyra />
 			<BenefitsSection />
-			<ContactSection />
+			<WhyTalmyra />
+			<PricingSection />
 			<Footer />
 		</div>
 	);

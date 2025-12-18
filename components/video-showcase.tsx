@@ -620,7 +620,7 @@ export default function VideoShowcase() {
 									</Button>
 
 									<Button asChild variant="gradient" className="rounded-full btn-modern">
-										<Link href="#contact" onClick={handleCloseModal}>
+										<Link href="#pricing" onClick={handleCloseModal}>
 											Get Full Demo
 										</Link>
 									</Button>

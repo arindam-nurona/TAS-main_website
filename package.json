@@ -54,6 +54,7 @@
     "react-dom": "^19",
     "react-hook-form": "latest",
     "react-intersection-observer": "latest",
+    "react-phone-number-input": "^3.4.14",
     "react-resizable-panels": "latest",
     "recharts": "latest",
     "sonner": "latest",

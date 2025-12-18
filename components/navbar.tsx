@@ -35,7 +35,7 @@ export default function Navbar() {
 			setScrolled(window.scrollY > 10);
 
 			// Update active section based on scroll position
-			const sections = ['videos', 'features', 'benefits', 'contact'];
+			const sections = ['videos', 'features', 'benefits', 'pricing'];
 			const currentSection = sections.find((section) => {
 				const element = document.getElementById(section);
 				if (element) {
@@ -209,20 +209,20 @@ export default function Navbar() {
 								></span>
 							</Link>
 							<Link
-								href="#contact"
+								href="#pricing"
 								className={cn(
 									'text-sm transition-colors relative group',
-									activeSection === 'contact'
+									activeSection === 'pricing'
 										? 'text-primary'
 										: 'text-muted-foreground hover:text-foreground'
 								)}
-								onClick={() => handleNavClick('contact')}
+								onClick={() => handleNavClick('pricing')}
 							>
-								Contact
+								Pricing
 								<span
 									className={cn(
 										'absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300',
-										activeSection === 'contact' ? 'w-full' : 'w-0 group-hover:w-full'
+										activeSection === 'pricing' ? 'w-full' : 'w-0 group-hover:w-full'
 									)}
 								></span>
 							</Link>
@@ -247,7 +247,7 @@ export default function Navbar() {
 								size="sm"
 								className="rounded-full px-5 py-2 btn-modern"
 							>
-								<Link href="#contact" onClick={() => handleNavClick('contact')}>
+								<Link href="#pricing" onClick={() => handleNavClick('pricing')}>
 									<span className="relative z-10">Get Demo</span>
 								</Link>
 							</Button>
@@ -345,11 +345,11 @@ export default function Navbar() {
 								Benefits
 							</Link>
 							<Link
-								href="#contact"
+								href="#pricing"
 								className="block py-2 text-lg font-medium hover:text-primary transition-colors"
-								onClick={() => handleNavClick('contact')}
+								onClick={() => handleNavClick('pricing')}
 							>
-								Contact
+								Pricing
 							</Link>
 							<Link
 								href="https://blog.talmyra.com/"
@@ -363,8 +363,8 @@ export default function Navbar() {
 								variant="gradient"
 								className="w-full rounded-full py-6 btn-modern"
 							>
-								<Link href="#contact" onClick={() => handleNavClick('contact')}>
-									Get Demo
+								<Link href="#pricing" onClick={() => handleNavClick('pricing')}>
+									Get Started
 								</Link>
 							</Button>
 						</div>

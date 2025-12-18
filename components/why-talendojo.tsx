@@ -179,7 +179,7 @@ const features = [
 
 export default function WhyTalmyra() {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, threshold: 0.2 });
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	return (
 		<section id="features" className="section-spacing relative overflow-hidden">

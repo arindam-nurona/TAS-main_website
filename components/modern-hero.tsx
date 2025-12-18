@@ -9,7 +9,6 @@ import {
 	Zap,
 	Target,
 	TrendingUp,
-	Shield,
 	Clock,
 	Globe,
 	BarChart3,
@@ -17,73 +16,10 @@ import {
 	Award,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { motion, useAnimation, useInView, AnimatePresence } from 'framer-motion';
 
 // Hero image configuration with bubbles positioned strictly on borders/outside
 const heroConfig = [
-	{
-		id: 3,
-		image: '/hero-image-3.webp',
-		alt: 'AI Voice Interview Interface',
-		title: 'AI Voice Interview',
-		subtitle: 'AI-powered natural conversation-based interviews',
-		badges: ['Voice Recognition', 'Real-time Analysis', 'Natural Flow'],
-		bubbles: [
-			{
-				id: 1,
-				text: 'Human-like Conversation',
-				position: { x: '-10%', y: '15%' },
-				delay: 0.3,
-				color: 'secondary',
-				icon: Users,
-			},
-			{
-				id: 2,
-				text: 'Smart Follow-up Questions',
-				position: { x: '92%', y: '50%' },
-				delay: 0.5,
-				color: 'primary',
-				icon: Target,
-			},
-			{
-				id: 3,
-				text: 'Personalized Voice Selection',
-				position: { x: '-8%', y: '75%' },
-				delay: 0.7,
-				color: 'accent',
-				icon: Globe,
-			},
-		],
-		icon: Target,
-	},
-	{
-		id: 4,
-		image: '/hero-image-4.webp',
-		alt: 'Voice Interview Results and Full Trace',
-		title: 'Interview Results & Trace',
-		subtitle: 'Complete interview analysis with full conversation trace',
-		badges: ['Full Transcript', 'Performance Analysis', 'Detailed Feedback'],
-		bubbles: [
-			{
-				id: 1,
-				text: 'Complete Transcript',
-				position: { x: '-5%', y: '10%' },
-				delay: 0.2,
-				color: 'primary',
-				icon: BarChart3,
-			},
-			{
-				id: 3,
-				text: 'Detailed Performance Analysis',
-				position: { x: '92%', y: '74%' },
-				delay: 0.6,
-				color: 'accent',
-				icon: Award,
-			},
-		],
-		icon: TrendingUp,
-	},
 	{
 		id: 1,
 		image: '/hero-image-1.webp',
@@ -142,6 +78,68 @@ const heroConfig = [
 				delay: 0.4,
 				color: 'success',
 				icon: Zap,
+			},
+		],
+		icon: TrendingUp,
+	},
+	{
+		id: 3,
+		image: '/hero-image-3.webp',
+		alt: 'AI Voice Interview Interface',
+		title: 'AI Voice Interview',
+		subtitle: 'AI-powered natural conversation-based interviews',
+		badges: ['Voice Recognition', 'Real-time Analysis', 'Natural Flow'],
+		bubbles: [
+			{
+				id: 1,
+				text: 'Human-like Conversation',
+				position: { x: '-10%', y: '15%' },
+				delay: 0.3,
+				color: 'secondary',
+				icon: Users,
+			},
+			{
+				id: 2,
+				text: 'Smart Follow-up Questions',
+				position: { x: '92%', y: '50%' },
+				delay: 0.5,
+				color: 'primary',
+				icon: Target,
+			},
+			{
+				id: 3,
+				text: 'Personalized Voice Selection',
+				position: { x: '-8%', y: '75%' },
+				delay: 0.7,
+				color: 'accent',
+				icon: Globe,
+			},
+		],
+		icon: Target,
+	},
+	{
+		id: 4,
+		image: '/hero-image-4.webp',
+		alt: 'Voice Interview Results and Full Trace',
+		title: 'Interview Results & Trace',
+		subtitle: 'Complete interview analysis with full conversation trace',
+		badges: ['Full Transcript', 'Performance Analysis', 'Detailed Feedback'],
+		bubbles: [
+			{
+				id: 1,
+				text: 'Complete Transcript',
+				position: { x: '-5%', y: '10%' },
+				delay: 0.2,
+				color: 'primary',
+				icon: BarChart3,
+			},
+			{
+				id: 3,
+				text: 'Detailed Performance Analysis',
+				position: { x: '92%', y: '74%' },
+				delay: 0.6,
+				color: 'accent',
+				icon: Award,
 			},
 		],
 		icon: TrendingUp,
@@ -245,7 +243,7 @@ export default function ModernHero() {
 						variants={itemVariants}
 					>
 						<span className="text-muted-foreground relative z-10">
-							Your AI recruiter, hire smarter with
+							Your AI driven ATS + Interviews, hire smarter with
 						</span>
 						{/* <div className="mx-3 h-4 w-px bg-border/60"></div> */}
 						<span className="text-primary font-medium relative z-10 px-1">90%</span>
@@ -261,7 +259,7 @@ export default function ModernHero() {
 						<span className="block mb-4">
 							<span className="relative inline-block">
 								<span className="relative z-10 text-gradient animate-gradient bg-gradient-to-r from-primary via-primary/80 to-primary">
-									Interview Smarter.
+									Hire Smarter.
 								</span>
 								<span className="absolute bottom-2 left-0 w-full h-3 bg-primary/15 -z-10 transform skew-x-12"></span>
 							</span>
@@ -279,12 +277,12 @@ export default function ModernHero() {
 
 					{/* Subtitle */}
 					<motion.p
-						className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-12 leading-relaxed"
+						className="text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto mb-12 leading-relaxed"
 						variants={itemVariants}
 					>
-						The AI-powered platform that revolutionizes your hiring process with
-						<span className="text-primary font-medium"> automated screening</span> and
-						<span className="text-primary font-medium"> unbiased evaluations</span>.
+						The AI-powered platform that revolutionizes your hiring process with <br />
+						<span className="text-primary font-medium"> AI-driven ATS</span> and
+						<span className="text-primary font-medium"> AI interviews</span>.
 					</motion.p>
 
 					{/* CTA Buttons */}
@@ -298,8 +296,8 @@ export default function ModernHero() {
 							size="lg"
 							className="rounded-full px-8 py-6 text-lg btn-modern group"
 						>
-							<Link href="#contact" className="flex items-center">
-								<span className="relative z-10">Get your Free Trial</span>
+							<Link href="#pricing" className="flex items-center">
+								<span className="relative z-10">Get Started</span>
 								<ArrowRight className="relative z-10 ml-2 h-6 w-6 transition-transform duration-300 group-hover:translate-x-1" />
 							</Link>
 						</Button>

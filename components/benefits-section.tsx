@@ -4,40 +4,116 @@ import type React from 'react';
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import {
+	ArrowRight,
+	Clock,
+	TrendingUp,
+	Star,
+	ClipboardCheck,
+	Target,
+	FileText,
+	Mail,
+	Shield,
+	Mic,
+	Zap,
+	Brain,
+	Eye,
+	BarChart,
+	FileBarChart,
+	Settings,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
-const benefits = [
+const atsFeatures = [
 	{
-		title: 'Reduce Time-to-Hire by 60%',
-		description:
-			'Automate early-stage screening and interviews to dramatically speed up your hiring process.',
-		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
+		title: 'Faster time-to-fill',
+		description: 'Reduce time-to-hire by up to 60%',
+		icon: Clock,
 	},
 	{
-		title: 'Improve Candidate Quality',
-		description:
-			'Evaluate candidates based on actual skills and problem-solving abilities, not just resume keywords.',
-		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
+		title: 'Higher recruiter productivity',
+		description: '3x recruiter efficiency with automation',
+		icon: TrendingUp,
 	},
 	{
-		title: 'Eliminate Hiring Bias',
-		description:
-			'Our AI evaluates candidates objectively, focusing solely on skills and communication abilities.',
-		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
+		title: 'Better candidate quality',
+		description: 'AI-powered candidate matching',
+		icon: Star,
 	},
 	{
-		title: 'Scale Your Hiring Process',
-		description:
-			"Screen 10x more candidates without increasing your recruiting team's workload.",
-		icon: <CheckCircle2 className="h-6 w-6 text-primary" />,
+		title: 'Reduced screening workload',
+		description: 'Automated resume screening',
+		icon: ClipboardCheck,
+	},
+	{
+		title: 'Stronger submittals and win-rate',
+		description: 'Data-driven candidate insights',
+		icon: Target,
+	},
+	{
+		title: 'Applicant tracking',
+		description: 'Complete candidate pipeline management',
+		icon: FileText,
+	},
+	{
+		title: 'Outreach',
+		description: 'Automated candidate engagement',
+		icon: Mail,
+	},
+	{
+		title: 'Resume integrity check',
+		description: 'AI-powered resume verification',
+		icon: Shield,
+	},
+];
+
+const interviewFeatures = [
+	{
+		title: 'Smart AI voice interview',
+		description: 'Natural conversation AI interviews',
+		icon: Mic,
+	},
+	{
+		title: 'Whole interview pipeline automated',
+		description: 'End-to-end interview automation',
+		icon: Zap,
+	},
+	{
+		title: 'AI evaluation',
+		description: 'Objective skill assessment',
+		icon: Brain,
+	},
+	{
+		title: 'Proctoring',
+		description: 'Advanced fraud detection',
+		icon: Eye,
+	},
+	{
+		title: 'Scale',
+		description: 'Interview unlimited candidates simultaneously',
+		icon: TrendingUp,
+	},
+	{
+		title: 'Real-time analytics',
+		description: 'Instant candidate performance insights',
+		icon: BarChart,
+	},
+	{
+		title: 'Hiring manager report',
+		description: 'Detailed candidate evaluation reports',
+		icon: FileBarChart,
+	},
+	{
+		title: 'Customizable assessments',
+		description: 'Tailored interview questions',
+		icon: Settings,
 	},
 ];
 
 export default function BenefitsSection() {
 	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true, threshold: 0.2 });
+	const isInView = useInView(ref, { once: true, amount: 0.2 });
 
 	return (
 		<section id="benefits" className="section-spacing relative overflow-hidden">
@@ -65,7 +141,7 @@ export default function BenefitsSection() {
 						transition={{ duration: 0.6 }}
 						className="inline-flex items-center rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary mb-6"
 					>
-						Key Benefits
+						Platform Features
 					</motion.div>
 					<motion.h2
 						initial={{ opacity: 0, y: 20 }}
@@ -73,8 +149,8 @@ export default function BenefitsSection() {
 						transition={{ duration: 0.6, delay: 0.1 }}
 						className="text-4xl md:text-5xl font-bold mb-6 leading-tight"
 					>
-						Transform your
-						<span className="text-gradient ml-2">hiring</span>
+						Powerful tools for
+						<span className="text-gradient ml-2">modern hiring</span>
 					</motion.h2>
 					<motion.p
 						initial={{ opacity: 0, y: 20 }}
@@ -82,21 +158,24 @@ export default function BenefitsSection() {
 						transition={{ duration: 0.6, delay: 0.2 }}
 						className="text-xl text-muted-foreground"
 					>
-						Join forward-thinking companies that are already saving time and making better
-						hiring decisions
+						Everything you need to streamline your recruitment process from start to
+						finish
 					</motion.p>
 				</div>
 
-				<div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-					{benefits.map((benefit, index) => (
-						<BenefitCard
-							key={index}
-							title={benefit.title}
-							description={benefit.description}
-							icon={benefit.icon}
-							index={index}
-						/>
-					))}
+				<div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+					<FeatureCard
+						title="ATS"
+						description="Complete applicant tracking system to manage your entire recruitment pipeline"
+						features={atsFeatures}
+						index={0}
+					/>
+					<FeatureCard
+						title="Interviewer"
+						description="AI-powered interview platform that automates candidate assessment and evaluation"
+						features={interviewFeatures}
+						index={1}
+					/>
 				</div>
 
 				<motion.div
@@ -111,7 +190,7 @@ export default function BenefitsSection() {
 						size="lg"
 						className="rounded-full px-8 btn-modern group relative overflow-hidden"
 					>
-						<Link href="#contact" className="flex items-center">
+						<Link href="#pricing" className="flex items-center">
 							<span className="relative z-10">Get your Free Trial</span>
 							<ArrowRight className="relative z-10 ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
 							<span className="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500 rounded-full"></span>
@@ -127,15 +206,19 @@ export default function BenefitsSection() {
 	);
 }
 
-function BenefitCard({
+function FeatureCard({
 	title,
 	description,
-	icon,
+	features,
 	index,
 }: {
 	title: string;
 	description: string;
-	icon: React.ReactNode;
+	features: Array<{
+		title: string;
+		description: string;
+		icon: React.ComponentType<{ className?: string }>;
+	}>;
 	index: number;
 }) {
 	const ref = useRef(null);
@@ -144,27 +227,45 @@ function BenefitCard({
 	return (
 		<motion.div
 			ref={ref}
-			initial={{ opacity: 0, y: 30 }}
-			animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+			initial={{ opacity: 0, x: index === 0 ? -20 : 20 }}
+			animate={
+				isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: index === 0 ? -20 : 20 }
+			}
 			transition={{
 				duration: 0.6,
-				delay: index * 0.1,
 				ease: [0.22, 1, 0.36, 1],
 			}}
-			className="glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/30 hover:bg-primary/5 group"
+			className="glass-card rounded-2xl border border-primary/20 p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow duration-300"
 		>
-			<div className="flex items-start gap-4">
-				<div className="mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-					{icon}
-				</div>
-				<div>
-					<h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors duration-300">
-						{title}
-					</h3>
-					<p className="text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
-						{description}
-					</p>
-				</div>
+			<div className="mb-8">
+				<h3 className="text-2xl font-bold mb-2">{title}</h3>
+				<p className="text-muted-foreground">{description}</p>
+			</div>
+
+			<div className="space-y-0">
+				{features.map((feature, featureIndex) => {
+					const IconComponent = feature.icon;
+					return (
+						<div key={featureIndex}>
+							<div className="flex items-start gap-4 py-4 group">
+								<div className="mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+									<IconComponent className="h-5 w-5 text-primary" />
+								</div>
+								<div className="flex-1 min-w-0">
+									<h4 className="text-base font-semibold mb-1 group-hover:text-primary transition-colors duration-300">
+										{feature.title}
+									</h4>
+									<p className="text-sm text-muted-foreground group-hover:text-foreground/80 transition-colors duration-300">
+										{feature.description}
+									</p>
+								</div>
+							</div>
+							{featureIndex < features.length - 1 && (
+								<div className="border-b border-border/50"></div>
+							)}
+						</div>
+					);
+				})}
 			</div>
 		</motion.div>
 	);

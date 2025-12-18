@@ -11,9 +11,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-	title: 'Talmyra - Interview Smarter, Hire Faster',
+	title: 'Talmyra - Hire Smarter, Hire Faster',
 	description:
-		'Revolutionize early-stage hiring with AI-driven coding tests, voice-based interviews, and automated candidate evaluations.',
+		'Talmyra is an AI-powered recruiting suite: ATS, screening, and voice interviews to help teams hire faster with less manual work.',
 	icons: {
 		icon: '/logo.png',
 		shortcut: '/logo.png',
